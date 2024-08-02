@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  skin-cancer-notebook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8888"
+    environment:
+      - JUPYTER_TOKEN=immirza
+    volumes:
+      - ./:/home/jovyan/work
